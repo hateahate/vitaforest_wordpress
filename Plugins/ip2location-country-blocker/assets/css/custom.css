@@ -1,0 +1,9 @@
+.chosen-container-multi .chosen-choices li.search-choice{border-radius:0}
+div.tagsinput span.tag{background:#F1F1F1;border-color:#CCCCCC;color:#444444}
+div.tagsinput span.tag a{color:#808080}
+
+.dashicons.spin{animation:dashicons-spin 1s infinite;animation-timing-function:linear}
+@keyframes dashicons-spin {
+	0%{transform:rotate(0deg)}
+		100%{transform:rotate(360deg)}
+}

@@ -1,0 +1,1 @@
+<p class="no-login">Please <a href="/registration">register</a> or <a href="/my-account">login</a> and you will be able to see prices, an extended description of the goods, as well as technical documentation.</p>

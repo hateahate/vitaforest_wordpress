@@ -1,0 +1,1 @@
+<? // Replaced to product-price.php ?>

@@ -1,0 +1,93 @@
+[
+    {
+        "name": "ip2location/ip2location-php",
+        "version": "8.2.3",
+        "version_normalized": "8.2.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/chrislim2888/IP2Location-PHP-Module.git",
+            "reference": "532749399c73b664ca8b24770b40b6c479131870"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/chrislim2888/IP2Location-PHP-Module/zipball/532749399c73b664ca8b24770b40b6c479131870",
+            "reference": "532749399c73b664ca8b24770b40b6c479131870",
+            "shasum": ""
+        },
+        "time": "2020-09-23T23:04:28+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "IP2Location.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "IP2Location",
+                "email": "support@ip2location.com",
+                "homepage": "http://www.ip2location.com"
+            }
+        ],
+        "description": "[Official Release] IP2Location PHP API to get location info from IPv4 and IPv6 address.",
+        "homepage": "http://www.ip2location.com",
+        "keywords": [
+            "geolocation",
+            "ip2location",
+            "ip2locationlite"
+        ]
+    },
+    {
+        "name": "ip2location/ip2proxy-php",
+        "version": "3.0.0",
+        "version_normalized": "3.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ip2location/ip2proxy-php.git",
+            "reference": "5488c3ca4a6dc981905b41e0ed396a89231acb90"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ip2location/ip2proxy-php/zipball/5488c3ca4a6dc981905b41e0ed396a89231acb90",
+            "reference": "5488c3ca4a6dc981905b41e0ed396a89231acb90",
+            "shasum": ""
+        },
+        "require": {
+            "ext-bcmath": "*",
+            "php": ">=5.6"
+        },
+        "time": "2020-07-23T07:14:00+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "class.IP2Proxy.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "IP2Location",
+                "email": "support@ip2location.com"
+            }
+        ],
+        "description": "PHP module to check if an IP address was being used as open proxy, web proxy, VPN anonymizer and TOR exits.",
+        "homepage": "http://www.ip2location.com/",
+        "keywords": [
+            "detect vpn",
+            "geolocation",
+            "ip to vpn",
+            "ip2proxy",
+            "open proxy",
+            "tor exits",
+            "web proxy"
+        ]
+    }
+]

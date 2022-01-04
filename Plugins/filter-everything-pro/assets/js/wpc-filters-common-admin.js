@@ -1,0 +1,60 @@
+/*!
+ * Filter Everything common admin 1.2.1
+ */
+(function($) {
+    "use strict";
+    $(document).ready(function (){
+        // Common JS code
+        $(document).on('click', '#show_bottom_widget', function (e){
+            if( $(this).is(':checked') ){
+                $('#show_open_close_button').parent('label').addClass('wpc-inactive-settings-field');
+            }else{
+                $('#show_open_close_button').parent('label').removeClass('wpc-inactive-settings-field');
+            }
+        });
+
+        $('#wpc_primary_color').wpColorPicker({
+            defaultColor: '',
+            palettes: [ '#0570e2', '#f44336', '#E91E63', '#007cba', '#65BC7B', '#FFEB3B', '#FFC107', '#FF9800', '#607D8B'],
+        });
+
+        $('.wpc-help-tip').tipTip({
+            'attribute': 'data-tip',
+            'fadeIn':    50,
+            'fadeOut':   50,
+            'delay':     200,
+            'keepAlive': true,
+            'maxWidth': "220px",
+        });
+
+        $( '.wpc-sortable-table' ).sortable({
+            items: "tr.pro-version.wpc-sortable-row",
+            delay: 150,
+            placeholder: "wpc-filter-field-shadow",
+            refreshPositions: true,
+            cursor: 'move',
+            handle: ".wpc-order-sortable-handle-icon",
+            axis: 'y',
+            update: function( event, ui ) {
+                renderTableOrder();
+            },
+
+        });
+
+        $(document).on( 'click', '.free-version .wpc-field-sortable-handle', function (){
+            alert( wpcFiltersAdminCommon.prefixesOrderAvailableInPro );
+        });
+
+    }); // End $(document).ready();
+
+
+    function renderTableOrder()
+    {
+        let num = 0;
+        $("tr.wpc-sortable-row").each( function ( index, element ) {
+            num = (index + 1);
+            $(element).find('.wpc-order-td').text(num);
+        });
+    }
+
+})(jQuery);

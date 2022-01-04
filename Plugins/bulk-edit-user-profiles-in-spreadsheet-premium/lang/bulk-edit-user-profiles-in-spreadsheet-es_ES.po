@@ -1,0 +1,348 @@
+# Copyright (C) 2019 WP Sheet Editor
+# This file is distributed under the same license as the WP Sheet Editor - Users plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Sheet Editor - Users 1.1.16\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/users-sheet\n"
+"POT-Creation-Date: 2020-03-21T23:43:33+00:00\n"
+"PO-Revision-Date: 2020-03-21 18:28-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WP Sheet Editor - Users"
+msgstr "Editor Masivo - Usuarios"
+
+#. Plugin URI of the plugin
+msgid ""
+"https://wpsheeteditor.com/extensions/edit-users-spreadsheet/?utm_source=wp-"
+"admin&utm_medium=plugins-list&utm_campaign=users"
+msgstr ""
+
+#. Description of the plugin
+msgid "Edit users in spreadsheet."
+msgstr "Editar usuarios en una hoja de cálculo"
+
+#. Author of the plugin
+msgid "WP Sheet Editor"
+msgstr "WP Sheet Editor"
+
+#. Author URI of the plugin
+msgid ""
+"https://wpsheeteditor.com/?utm_source=wp-admin&utm_medium=plugins-"
+"list&utm_campaign=users"
+msgstr ""
+
+#: inc/buddypress.php:43
+msgid "BP: %s"
+msgstr "BP: %s"
+
+#: inc/helpers.php:24
+msgid "Subscriber"
+msgstr "Suscriptor"
+
+#: inc/helpers.php:39
+msgid "Customer"
+msgstr "Cliente"
+
+#: inc/helpers.php:40
+msgid "Shop manager"
+msgstr "Manager de Ventas"
+
+#: inc/spreadsheet-bootstrap.php:24
+msgid "Edit in a Spreadsheet"
+msgstr "Editar en una Hoja de Cálculo"
+
+#: inc/spreadsheet-bootstrap.php:43
+msgid "Edit Users"
+msgstr "Editar Usuarios"
+
+#: inc/spreadsheet-bootstrap.php:49
+msgid "Bulk Editor"
+msgstr "Editor Masivo"
+
+#: inc/spreadsheet-bootstrap.php:70
+msgid "ID"
+msgstr "ID"
+
+#: inc/spreadsheet-bootstrap.php:82
+msgid "Email"
+msgstr "Correo"
+
+#: inc/spreadsheet-bootstrap.php:94
+msgid "Login"
+msgstr "Inicio de Sesión"
+
+#: inc/spreadsheet-bootstrap.php:106 users.php:331
+msgid "Role"
+msgstr "Rol"
+
+#: inc/spreadsheet-bootstrap.php:124
+msgid "Status"
+msgstr "Estado"
+
+#: inc/spreadsheet-bootstrap.php:140
+msgid "First name"
+msgstr "Nombre"
+
+#: inc/spreadsheet-bootstrap.php:152
+msgid "Last name"
+msgstr "Apellido"
+
+#: inc/spreadsheet-bootstrap.php:164
+msgid "Description"
+msgstr "Descripción"
+
+#: inc/spreadsheet-bootstrap.php:175
+msgid "Registration date"
+msgstr "Fecha de registro"
+
+#: inc/spreadsheet-bootstrap.php:188
+msgid "New password"
+msgstr "Nueva contraseña"
+
+#: inc/spreadsheet-bootstrap.php:200
+msgid "Nicename"
+msgstr "Nombre amigable"
+
+#: inc/spreadsheet-bootstrap.php:212
+msgid "Website"
+msgstr "Sitio web"
+
+#: inc/spreadsheet-bootstrap.php:224
+msgid "Display name"
+msgstr "Nombre para mostrar"
+
+#: inc/spreadsheet-bootstrap.php:236
+msgid "Nickname"
+msgstr "Apodo"
+
+#: inc/spreadsheet-bootstrap.php:248
+msgid "Rich editing"
+msgstr "Edición sofisticada"
+
+#: inc/spreadsheet-bootstrap.php:266
+msgid "Comment shortcuts"
+msgstr "Atajos de comentarios"
+
+#: inc/spreadsheet-bootstrap.php:283
+msgid "Color scheme"
+msgstr "Esquema de colores"
+
+#: inc/spreadsheet-bootstrap.php:304
+msgid "Show admin bar on frontend"
+msgstr "Mostrar barra de administración en el frontend"
+
+#: inc/spreadsheet-bootstrap.php:329
+msgid "Language"
+msgstr "Idioma"
+
+#: inc/woocommerce.php:36
+msgid "Billing first name"
+msgstr "Nombre de facturación"
+
+#: inc/woocommerce.php:48
+msgid "Billing last name"
+msgstr "Apellido de facturación"
+
+#: inc/woocommerce.php:60
+msgid "Billing company"
+msgstr "Compañía de facturación"
+
+#: inc/woocommerce.php:72
+msgid "Billing address 1"
+msgstr "Dirección de facturación 1"
+
+#: inc/woocommerce.php:84
+msgid "Billing address 2"
+msgstr "Dirección de facturación 2"
+
+#: inc/woocommerce.php:96
+msgid "Billing city"
+msgstr "Ciudad de facturación"
+
+#: inc/woocommerce.php:108
+msgid "Billing post code"
+msgstr "Código postal de facturación"
+
+#: inc/woocommerce.php:120
+msgid "Billing country"
+msgstr "País de facturación"
+
+#: inc/woocommerce.php:132
+msgid "Billing state"
+msgstr "Estado de facturación"
+
+#: inc/woocommerce.php:144
+msgid "Billing phone"
+msgstr "Teléfono de facturación"
+
+#: inc/woocommerce.php:156
+msgid "Billing email"
+msgstr "Correo electrónico de facturación"
+
+#: inc/woocommerce.php:169
+msgid "Shipping first name"
+msgstr "Nombre de envío"
+
+#: inc/woocommerce.php:181
+msgid "Shipping last name"
+msgstr "Apellido de envío"
+
+#: inc/woocommerce.php:193
+msgid "Shipping company"
+msgstr "Compañía de envío"
+
+#: inc/woocommerce.php:205
+msgid "Shipping address 1"
+msgstr "Dirección de envío 1"
+
+#: inc/woocommerce.php:217
+msgid "Shipping address 2"
+msgstr "Dirección de envío 2"
+
+#: inc/woocommerce.php:229
+msgid "Shipping city"
+msgstr "Ciudad de envío"
+
+#: inc/woocommerce.php:241
+msgid "Shipping post code"
+msgstr "Código postal de envío"
+
+#: inc/woocommerce.php:253
+msgid "Shipping country"
+msgstr "País de envío"
+
+#: inc/woocommerce.php:265
+msgid "Shipping state"
+msgstr "Estado de envío"
+
+#: inc/woocommerce.php:277
+msgid "Shipping phone"
+msgstr "Teléfono de envío"
+
+#: inc/woocommerce.php:289
+msgid "Shipping email"
+msgstr "Correo electrónico de envío"
+
+#: inc/woocommerce.php:301
+msgid "Last purchase date"
+msgstr "Fecha de última compra"
+
+#: users.php:82
+msgid ""
+"Please update the WP Sheet Editor plugin and all its extensions to the "
+"latest version. The features of the plugin \""
+msgstr ""
+"Por favor, actualiza el plugin WP Sheet Editor y todas sus extensiones a la "
+"última versión, el plugin NÚCLEO debe ser la versión 2.5.2 o superior. El "
+"plugin \""
+
+#: users.php:129
+msgid "My license"
+msgstr "Mi licencia"
+
+#: users.php:267 users.php:445
+msgid "Users"
+msgstr "Usuarios"
+
+#: users.php:332
+msgid "Select..."
+msgstr "Seleccionar..."
+
+#: users.php:333
+msgid "All"
+msgstr "Todos"
+
+#: users.php:345
+msgid "Search in user email, login, nicename, display name"
+msgstr "Buscar en inicio de sesión de usuario, correo electrónico, nombre"
+
+#: users.php:403
+msgid ""
+". <b>Lite version</b> listing \"subscriber\" users. <b>Go pro:</b> edit all "
+"the roles (%s), custom fields, export, import, and more"
+msgstr ""
+". <b>Versión gratis</b> muestra usuarios con rol \"subscriptor\". <b>Pásate "
+"a la versión premium:</b> para editar todos los roles (%s), todos los "
+"campos, exportar, importar, y más"
+
+#: users.php:426
+msgid ""
+"We find users that have the same ID, email, or username in the CSV and the "
+"WP Profile.<br>Please select the CSV column that contains one of those "
+"fields.<br>You must import the selected column if you want to update "
+"existing users, rows without the value will be created as new."
+msgstr ""
+"Encontramos usuarios que tienen el mismo ID, correo o nombre de usuario en "
+"el CSV y el Perfil de WP.<br>Por favor selecciona la columna CSV que "
+"contiene uno de esos campos.<br>Debes importar la columna seleccionada si "
+"quieres actualizar usuarios existentes, las filas sin el valor se crearán "
+"como nuevas."
+
+#: views/upgrade-message.php:6
+msgid "Go premium"
+msgstr "Hazte premium"
+
+#: views/upgrade-message.php:8
+msgid "Edit Customers billing and shipping info."
+msgstr "Editar la información de facturación y envío de los clientes."
+
+#: views/upgrade-message.php:9
+msgid "Update hundreds of user profiles using formulas"
+msgstr "Actualizar cientos de perfiles de usuarios utilizando fórmulas"
+
+#: views/upgrade-message.php:10
+msgid "Advanced search. Find user profiles quickly."
+msgstr "Búsqueda avanzada. Encontrar perfiles de usuarios rápidamente."
+
+#: views/upgrade-message.php:11
+msgid "Create a lot of users quickly."
+msgstr "Crea muchos usuarios rápidamente."
+
+#: views/upgrade-message.php:12
+msgid "Edit custom fields from user profiles, including passwords"
+msgstr ""
+"Edita campos personalizados de perfiles de usuario, incluyendo contraseñas"
+
+#: views/upgrade-message.php:13
+msgid "Edit users with any role, including %s."
+msgstr "Editar usuarios con cualquier rol, incluyendo %s."
+
+#: views/upgrade-message.php:14
+msgid "Hide and rename columns in the spreadsheet"
+msgstr "Ocultar y renombrar columnas en la hoja de cálculo"
+
+#: views/upgrade-message.php:22
+msgid ""
+"<p><b>Money back guarantee.</b> We´ll give you a refund if the plugin doesn"
+"´t work.</p>"
+msgstr ""
+"<p><b>Garantía de devolución de dinero.</b> Te devolveremos el dinero si el "
+"plugin no funciona.</p>."
+
+#: views/welcome-page-content.php:4
+msgid "Thank you for installing our plugin."
+msgstr "Gracias por instalar nuestro plugin."
+
+#: views/welcome-page-content.php:10
+msgid ""
+"<p>Note. You are using the free version and you can edit only users with \"%s"
+"\" role.</p>"
+msgstr ""
+"<p>Nota. Estás usando la versión gratuita y sólo puedes editar usuarios con "
+"el rol \"%s\".</p>"
+
+#: views/welcome-page-content.php:15
+msgid ""
+"You can open the Users Bulk Editor Now:  <a href=\"%s\" class=\"button"
+"\">Click here</a>"
+msgstr ""
+"Puedes abrir el Editor Masivo Usuarios ahora:  <a href=\"%s\" class=\"button"
+"\" >Haz clic aquí </a>"

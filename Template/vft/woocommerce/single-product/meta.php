@@ -1,0 +1,1 @@
+<? // Removed cause we don't need that ?>
