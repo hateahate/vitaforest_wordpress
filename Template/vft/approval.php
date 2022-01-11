@@ -25,9 +25,10 @@ $userCount = 1;
         <th>Registry code</th>
         <th>VAT</th>
         <th>Phone</th>
+		<th>Email</th>
         <th>Address</th>
         <th>Name</th>
-        <th>Date of birth</th>
+		<th>Date of birth</th>
     </tr>
 <?
 if (!empty($userQuery->results)){
@@ -73,6 +74,7 @@ if (!empty($userQuery->results)){
         <td><? echo $userCode[0]; ?></td>
         <td><? echo $userVat[0]; ?></td>
         <td><? echo $userPhone; ?></td>
+			<td><? echo $userEmail; ?></td>
         <td><? echo $userAddress; ?></td>
         <td><? echo $userName; ?></td>
         <td><? echo $userBirth[0]; ?></td>

@@ -1499,43 +1499,9 @@ function wpschool_disable_selection_text() {
         echo '</script>';
     }
 }
- 
-/** Отключение правой клавиши мыши */ 
-function wpschool_disable_right_click() {
 
-    if ( !current_user_can( 'manage_options' ) ) {
-        echo '<script>';
-        echo 'document.oncontextmenu = function() { return false; }';
-        echo '</script>';
-    }
-}
-
-/** Отключение горячих клавиш */ 
-function wpschool_disable_keystrokes() {
-
-    if ( !current_user_can( 'manage_options' ) ) {
-        echo '<script>';
-        echo 'function disable_keystrokes(e) {';
-        echo 'if (e.ctrlKey){';
-        echo 'var key;';
-        echo 'if(window.event)';
-        echo 'key = window.event.keyCode;';
-        echo 'else ';
-        echo 'key = e.which;';
-        echo 'if (key == 97 || key == 65 || key == 67 || key == 99 || key == 88 || key == 120 || key == 26 || key == 85 || key == 86 || key == 83 || key == 43)';
-        echo 'return false;';
-        echo 'else ';
-        echo 'return true;';
-        echo '}';
-        echo '}';
-        echo 'document.onkeydown = disable_keystrokes;';
-        echo '</script>';
-    }
-}
 
 add_action( 'wp_footer', 'wpschool_disable_selection_text' );
-add_action( 'wp_footer', 'wpschool_disable_right_click' );
-add_action( 'wp_footer', 'wpschool_disable_keystrokes' );
 
 
 ?>
