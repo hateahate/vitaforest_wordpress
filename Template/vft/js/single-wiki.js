@@ -36,11 +36,3 @@ cntbtn.onclick = function () {
 	extwrapper.classList.add('wrapper-disable');
 	generalwrapper.classList.add('wrapper-disable');
 }
-$('.related-products__slider').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  centerMode: true,
-  variableWidth: true
-});

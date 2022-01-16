@@ -41,14 +41,14 @@ while ( have_posts() ) :
 </div>
     <div class="single-wiki__related-products related-products">
         <h3 class="related-products__title">Related products</h3>
-        <div class="related-products__slider">
+        <div class="related-products__slider_nojs">
             <?
             $a = array(
             'post_type'      => 'product',
             'post_status'    => 'publish',
             'order'          => 'DESC',
             'orderby'        => 'date',
-            'posts_per_page' => 6
+            'posts_per_page' => 12
             );
             $query = new WP_Query($a); ?>
             <? if ($query->have_posts()) {
@@ -74,10 +74,6 @@ while ( have_posts() ) :
         </div>
     </div>
 <?
-do_action('vft_js_jquery');
-?>
-<?
-do_action('vft_js_slickslider');
 do_action('vft_js_singlewiki');
 ?>
 <?
