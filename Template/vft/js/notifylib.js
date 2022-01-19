@@ -19,7 +19,7 @@ function createNotification(addClassName, actionName, notificationText, name) {
         let newElement = document.createElement('div');
         // Шаблон уведомления
         newElement.innerHTML = '<div class="popup ' + addClassName + '-main">' +
-            '<div class="' + addClassName + ' popup__head">' + '<p class="' + addClassName + ' popup__title">' + name + '</p>' + '<button class="' + addClassName + '-close close-popup"><img src="<? echo get_bloginfo( "template_directory" ); ?>/img/burger-close.svg"' + 'alt="Close button"></button>' + '</div>' + '<p class="' + addClassName + ' popup__text">' + notificationText + '</p>' + '<div class="popup-actions">' + '<a class="popup__confirm ' + addClassName + '-confirm" href="#">' + actionName + '</a>' + '</div>' + '</div>';
+            '<div class="' + addClassName + ' popup__head">' + '<p class="' + addClassName + ' popup__title">' + name + '</p>' + '</div>' + '<p class="' + addClassName + ' popup__text">' + notificationText + '</p>' + '<div class="popup-actions">' + '<a class="popup__confirm ' + addClassName + '-confirm" href="#">' + actionName + '</a>' + '</div>' + '</div>';
         // Добавляем уведомление в контейнер 
         notificationContainer.appendChild(newElement);
     }
