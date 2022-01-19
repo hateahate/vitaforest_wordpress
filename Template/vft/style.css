@@ -17553,12 +17553,14 @@ display: none;
 		}
 		}
 		.notification-container{
-			min-height: auto;
-		}
-		.notification-wrapper{
 			display: flex;
 			align-items: center;
 			flex-direction: column;
-			flex-wrap: nowrap;			
+			flex-wrap: nowrap;	
+		}
+		.notification-wrapper{
+			min-height: auto;
+			position: fixed;
+			bottom: 200px;	
 		}
 
