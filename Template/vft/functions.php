@@ -244,6 +244,12 @@ function vft_js_slickslider(){
 echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/slick.min.js"></script>';
 }
 
+// Connect notify library
+add_action('vft_js_notifylib', 'vft_js_notifylib');
+function vft_js_notifylib(){
+echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/notifylib.js"></script>';
+}
+
 // Load search results filter script
 add_action('vft_js_searchfilter', 'vft_js_searchfilter');
 function vft_js_searchfilter(){

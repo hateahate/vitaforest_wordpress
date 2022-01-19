@@ -3,6 +3,10 @@
 </div>
 <footer class="main-footer">
   <div class="container">
+    <div class="notification-container">
+
+    </div>
+    <? do_action('vft_js_notifylib'); ?>
 	  <div class="main-footer__popup footer-popup">
     <div class="container">
         <h4 class="footer-popup__title">Notice</h4>
