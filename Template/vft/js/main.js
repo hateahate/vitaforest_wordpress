@@ -649,27 +649,29 @@ if (authPageCheck != null) {
 
 
 let logoutBtn = document.querySelector('.logout-btn');
-let logoutClose = document.querySelector('.close-logout-popup');
-let logoutPop = document.querySelector('.logout-popup');
-let logoutBg = document.querySelector('.desktop-popup-bg');
-logoutBtn.onclick = function () {
-  logoutPop.classList.add('logout-popup_active');
-  logoutBg.classList.add('desktop-popup-bg_active');
-}
-document.querySelector(".close-logout-popup").onclick = function () {
-  document.querySelector('.logout-popup').classList.remove('logout-popup_active');
-  document.querySelector('.desktop-popup-bg').classList.remove('desktop-popup-bg_active');
-}
-document.querySelector(".desktop-popup-bg").onclick = function () {
-  document.querySelector('.logout-popup').classList.remove('logout-popup_active');
-  document.querySelector('.desktop-popup-bg').classList.remove('desktop-popup-bg_active');
+if (logoutBtn != null) {
+  let logoutClose = document.querySelector('.close-logout-popup');
+  let logoutPop = document.querySelector('.logout-popup');
+  let logoutBg = document.querySelector('.desktop-popup-bg');
+  logoutBtn.onclick = function () {
+    logoutPop.classList.add('logout-popup_active');
+    logoutBg.classList.add('desktop-popup-bg_active');
+  }
+  document.querySelector(".close-logout-popup").onclick = function () {
+    document.querySelector('.logout-popup').classList.remove('logout-popup_active');
+    document.querySelector('.desktop-popup-bg').classList.remove('desktop-popup-bg_active');
+  }
+  document.querySelector(".desktop-popup-bg").onclick = function () {
+    document.querySelector('.logout-popup').classList.remove('logout-popup_active');
+    document.querySelector('.desktop-popup-bg').classList.remove('desktop-popup-bg_active');
+  }
 }
 
-  // Bitrix Widget
+// Bitrix Widget
 
-  (function (w, d, u) {
-    var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
-    var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
-  })(window, document, 'https://portal.vitaforestfood.com/upload/crm/site_button/loader_8_eal8j3.js');
+(function (w, d, u) {
+  var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
+  var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+})(window, document, 'https://portal.vitaforestfood.com/upload/crm/site_button/loader_8_eal8j3.js');
 
 console.log('main.js status: Ok');
