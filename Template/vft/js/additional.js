@@ -1,8 +1,11 @@
 // Auth page
-document.querySelector(".forgot-password").addEventListener('click', () => {
+let authElement = document.querySelector(".forgot-password");
+authElement.addEventListener('click', () => {
     document.querySelector('.reset-password').classList.add('reset-password_active');
 });
-document.querySelector(".close-reset-password").addEventListener('click', () => {
+
+let authElement2 = document.querySelector(".close-reset-password");
+authElement2.addEventListener('click', () => {
     document.querySelector('.reset-password').classList.remove('reset-password_active');
 });
 
