@@ -119,13 +119,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button class="nologin-ok">Ok</button>
     </div>
 </div>
-<div class="notification-wrapper">
-<div class="notification-container">
-</div>
-</div>
-<? do_action('vft_js_notifylib'); ?>		
+<? get_template_part('/parts/functional/notifications'); ?>		
 <div class='main-content'>
-<? do_action('vft_nologin_banner'); ?>
 <div class="breadcrumbs container">
 <?php
 	if( is_front_page() ) {
