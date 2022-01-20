@@ -13,30 +13,49 @@ const notificationAuthData = document.querySelector('#notification-auth-data');
 // Шаблон функции создания уведомлений
 /**
  * 
- * @param {*} name Задает заголовок уведомления
+ * @param {*} notificationName Задает заголовок уведомления
  * @param {*} actionName Текст внутри кнопки на уведомлении
  * @param {*} notificationText Текст уведомления
- * @param {*} addClassName Дополнительный класс для уведомления
+ * @param {*} className Дополнительный класс для уведомления
  */
 
-function createNotification(addClassName, actionName, notificationText, name) {
+function createNotification(notificationName, notificationText, actionName, className) {
     // Проверяем видел ли пользователь уведомление ранее, если видел - не рисуем его
-    let storageItemName = addClassName + 'Accepted';
+    let storageItemName = className + 'Accepted';
     if (localStorage.getItem(storageItemName) != 'true') {
         // Создаем новый DIV для вставки шаблона
         let newElement = document.createElement('div');
         // Шаблон уведомления
-        newElement.innerHTML = '<div class="popup ' + addClassName + '-main">' +
-            '<div class="' + addClassName + ' popup__head">' + '<p class="' + addClassName + ' popup__title">' + name + '</p>' + '</div>' + '<p class="' + addClassName + ' popup__text">' + notificationText + '</p>' + '<div class="popup-actions">' + '<a class="popup__confirm ' + addClassName + '-confirm" href="#">' + actionName + '</a>' + '</div>' + '</div>';
+        newElement.innerHTML = '<div class="popup ' + className + '-main">' +
+            '<div class="' + className + ' popup__head">' + '<p class="' + className + ' popup__title">' + notificationName + '</p>' + '</div>' + '<p class="' + className + ' popup__text">' + notificationText + '</p>' + '<div class="popup-actions">' + '<a class="popup__confirm ' + className + '-confirm" href="#">' + actionName + '</a>' + '</div>' + '</div>';
         // Добавляем уведомление в контейнер 
         notificationContainer.appendChild(newElement);
-        logicNotification(addClassName);
+        logicNotification(className);
+    }
+}
+
+/**
+ * @param {*} notificationUrl Ссылка прикрепленная к кнопке, для перехода по клику
+ */
+
+function createNotificationUrl(notificationName, notificationText, actionName, className, notificationUrl) {
+    // Проверяем видел ли пользователь уведомление ранее, если видел - не рисуем его
+    let storageItemName = className + 'Accepted';
+    if (localStorage.getItem(storageItemName) != 'true') {
+        // Создаем новый DIV для вставки шаблона
+        let newElement = document.createElement('div');
+        // Шаблон уведомления
+        newElement.innerHTML = '<div class="popup ' + className + '-main">' +
+            '<div class="' + className + ' popup__head">' + '<p class="' + className + ' popup__title">' + notificationName + '</p>' + '</div>' + '<p class="' + className + ' popup__text">' + notificationText + '</p>' + '<div class="popup-actions">' + '<a class="popup__confirm ' + className + '-confirm" href="' + notificationUrl + '">' + actionName + '</a>' + '</div>' + '</div>';
+        // Добавляем уведомление в контейнер 
+        notificationContainer.appendChild(newElement);
+        logicNotification(className);
     }
 }
 
 /**
  * 
- * @param {*} className Имя класса уведомления на которое вешается событие, дубль переменной addClassName функции createNotification
+ * @param {*} className Имя класса уведомления на которое вешается событие, дубль переменной className функции createNotification
  */
 
 function logicNotification(className) {
@@ -55,17 +74,19 @@ function logicNotification(className) {
     }
 }
 
-// Функция возвращающая результат проверки авторизации пользователя
+// Функция создания уведомления для неавторизованных пользователей
 
-function createNotificationNonAuth(addClassName, actionName, notificationText, name) {
+function createNotificationNonAuth(notificationName, notificationText, actionName, className) {
     if (notificationAuthData.dataset.auth != 'true') {
-        createNotification(addClassName, actionName, notificationText, name);
+        createNotification(notificationName, notificationText, actionName, className);
     }
 }
 
-function createNotificationAuth(addClassName, actionName, notificationText, name) {
+// Функция создания уведомления для авторизованных пользователей
+
+function createNotificationAuth(notificationName, notificationText, actionName, className) {
     if (notificationAuthData.dataset.auth == 'true') {
-        createNotification(addClassName, actionName, notificationText, name);
+        createNotification(notificationName, notificationText, actionName, className);
     }
 }
 
