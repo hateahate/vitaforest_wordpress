@@ -155,17 +155,6 @@ userMenuClose.onclick = function () {
 })
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const slider = new ChiefSlider('.slider', {
-    loop: false
-  });
-
-  const postsSlider = new ChiefSlider('.recent-blog__slider', {
-    loop: true
-  });
-});
-
-
 let textToShow = document.querySelector('.about__full-text');
 let showBtn = document.querySelector('.about__show-btn');
 if (showBtn != null) {
@@ -641,7 +630,6 @@ if (authPageCheck != null) {
     authheader.classList.add('header-auth');
     authfooter.classList.add('footer-auth');
     authmain.classList.add('main-content-auth');
-    authnologin.classList.add('no-login-auth');
     authcont.classList.remove('container');
   }
 }
