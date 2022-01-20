@@ -525,56 +525,6 @@ if (shopMainContainer != null) {
       }
     }
   }
-
-  function submit(evt) {
-    evt.preventDefault();
-  }
-
-  function filters(evt) {
-    evt.preventDefault();
-    let input = document.querySelector('#site-search');
-    let inputValue = input.value.toUpperCase();
-    let cards = document.querySelectorAll('.wpc-term-item');
-
-    cards.forEach(
-      function getMatch(info) {
-        let heading = info.querySelector('a');
-        let headingContent = heading.innerHTML.toUpperCase();
-
-        if (headingContent.includes(inputValue)) {
-          info.classList.add('showx');
-          info.classList.remove('hidex');
-        }
-        else {
-          info.classList.add('hidex');
-          info.classList.remove('showx');
-        }
-      }
-    )
-  }
-
-  function autoReset() {
-    let input = document.querySelector('#site-search');
-    let cards = document.querySelectorAll('.wpc-term-item');
-
-    cards.forEach(
-      function getMatch(info) {
-        if (input.value == null, input.value == "") {
-          info.classList.remove('showx');
-          info.classList.remove('showx');
-        }
-        else {
-          return;
-        }
-      }
-    )
-  }
-
-  let form = document.querySelector('#site-search');
-
-  form.addEventListener('keyup', filters);
-
-  form.addEventListener('submit', submit);
 }
 
 let counter = document.querySelector('.countas');
