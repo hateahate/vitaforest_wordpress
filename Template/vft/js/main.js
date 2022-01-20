@@ -3,24 +3,24 @@ const aboutTitles = document.querySelectorAll('.about-dropdown__title');
   this.nextElementSibling.classList.toggle('about-dropdown__content_active')
 });
 jQuery(document).ready(function (a) {
-    const t = a(".search__input"),
-        e = a(".ajax-search");
-    t.keyup(function () {
-        let t = a(this).val();
-        t.length > 2
-            ? a.ajax({
-                  url: "/wp-admin/admin-ajax.php",
-                  type: "POST",
-                  data: { action: "ajax_search", term: t },
-                  success: function (a) {
-                      e.fadeIn(200).html(a);
-                  },
-              })
-            : e.fadeOut(200);
-    }),
-        a(document).mouseup(function (a) {
-            0 === t.has(a.target).length && 0 === e.has(a.target).length && e.fadeOut(200);
-        });
+  const t = a(".search__input"),
+    e = a(".ajax-search");
+  t.keyup(function () {
+    let t = a(this).val();
+    t.length > 2
+      ? a.ajax({
+        url: "/wp-admin/admin-ajax.php",
+        type: "POST",
+        data: { action: "ajax_search", term: t },
+        success: function (a) {
+          e.fadeIn(200).html(a);
+        },
+      })
+      : e.fadeOut(200);
+  }),
+    a(document).mouseup(function (a) {
+      0 === t.has(a.target).length && 0 === e.has(a.target).length && e.fadeOut(200);
+    });
 });
 
 
@@ -46,28 +46,28 @@ const footerMenu = document.querySelectorAll('.footer-navigation__title');
 const navigationMainBtn = document.querySelectorAll('.navigation__main-link');
 
 [...navigationMainBtn].forEach(btn => btn.onclick = function () {
-	if (window.innerWidth < 1128) {
-  this.lastElementChild.classList.toggle('navigation__category_active');
-  this.classList.toggle('navigation__main-link_active');
-	
-} else {
-  return
-}
+  if (window.innerWidth < 1128) {
+    this.lastElementChild.classList.toggle('navigation__category_active');
+    this.classList.toggle('navigation__main-link_active');
+
+  } else {
+    return
+  }
 });
 
 
 cartBtn.onclick = function () {
   cartBlock.classList.toggle('minicart_shown');
-cartCont.classList.toggle('minicart-container__active')
+  cartCont.classList.toggle('minicart-container__active')
   backgroundLayer.classList.toggle('bg-layer_active');
-body.classList.toggle('jija');
+  body.classList.toggle('jija');
 }
 
 cartClose.onclick = function () {
   cartBlock.classList.toggle('minicart_shown');
   backgroundLayer.classList.toggle('bg-layer_active');
-	cartCont.classList.toggle('minicart-container__active')
-	body.classList.remove('jija')
+  cartCont.classList.toggle('minicart-container__active')
+  body.classList.remove('jija')
 }
 //scrol btn
 
@@ -76,7 +76,7 @@ function trackScroll() {
   if (window.pageYOffset > 1000) {
     goTopBtn.classList.add('back_to_top-show')
   }
-  else if(window.pageYOffset < 1000) {
+  else if (window.pageYOffset < 1000) {
     goTopBtn.classList.remove('back_to_top-show');
   }
 }
@@ -98,53 +98,53 @@ goTopBtn.addEventListener('click', backToTop);
 
 menuButton.onclick = function () {
   navigation.classList.toggle('navigation-container_active');
-	backgroundLayer.classList.toggle('bg-layer_active');
+  backgroundLayer.classList.toggle('bg-layer_active');
 };
 
 backgroundLayer.onclick = function () {
   searchForm.classList.remove('header__search_active');
-	this.classList.toggle('bg-layer_active');
-	 navigation.classList.remove('navigation-container_active');
-	cartBlock.classList.remove('minicart_shown');
-	userMenu.classList.remove('user-menu_active');
-	cartCont.classList.remove('minicart-container__active');
-	body.classList.remove('jija');
-	userMenuCont.classList.remove('user-menu__container_active');
-	[...navigationMainBtn].forEach(function (item, i, arr) {
-  item.lastElementChild.classList.remove('navigation__category_active');
-  item.classList.remove('navigation__main-link_active');
-});
+  this.classList.toggle('bg-layer_active');
+  navigation.classList.remove('navigation-container_active');
+  cartBlock.classList.remove('minicart_shown');
+  userMenu.classList.remove('user-menu_active');
+  cartCont.classList.remove('minicart-container__active');
+  body.classList.remove('jija');
+  userMenuCont.classList.remove('user-menu__container_active');
+  [...navigationMainBtn].forEach(function (item, i, arr) {
+    item.lastElementChild.classList.remove('navigation__category_active');
+    item.classList.remove('navigation__main-link_active');
+  });
 
 }
 
 closeNavigation.onclick = function () {
   navigation.classList.toggle('navigation-container_active');
-	backgroundLayer.classList.toggle('bg-layer_active');
-	body.classList.remove('jija');
+  backgroundLayer.classList.toggle('bg-layer_active');
+  body.classList.remove('jija');
 }
 
 showSearch.onclick = function () {
   searchForm.classList.toggle('header__search_active');
   backgroundLayer.classList.toggle('bg-layer_active');
-	body.classList.toggle('jija')
+  body.classList.toggle('jija')
 };
-showUserMenu.mouseover  = function () {
+showUserMenu.mouseover = function () {
   userMenu.classList.toggle('user-menu_active');
-	backgroundLayer.classList.toggle('bg-layer_active');
-	body.classList.toggle('jija')
+  backgroundLayer.classList.toggle('bg-layer_active');
+  body.classList.toggle('jija')
 };
 showUserMenu.onclick = function () {
   userMenu.classList.toggle('user-menu_active');
-	userMenuCont.classList.toggle('user-menu__container_active')
-	backgroundLayer.classList.toggle('bg-layer_active');
-	body.classList.toggle('jija')
+  userMenuCont.classList.toggle('user-menu__container_active')
+  backgroundLayer.classList.toggle('bg-layer_active');
+  body.classList.toggle('jija')
 };
 
 userMenuClose.onclick = function () {
   userMenu.classList.toggle('user-menu_active');
-	userMenuCont.classList.toggle('user-menu__container_active')
-	backgroundLayer.classList.toggle('bg-layer_active');
-	body.classList.remove('jija')
+  userMenuCont.classList.toggle('user-menu__container_active')
+  backgroundLayer.classList.toggle('bg-layer_active');
+  body.classList.remove('jija')
 };
 
 
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const slider = new ChiefSlider('.slider', {
     loop: false
   });
-	
+
   const postsSlider = new ChiefSlider('.recent-blog__slider', {
     loop: true
   });
@@ -179,11 +179,5 @@ showBtn.onclick = function () {
       top: 2200,
       behavior: "smooth"
     });
-  }}
-
-let dude={}
-
-dude.hui = function(){
-	alert('mat')
+  }
 }
-
