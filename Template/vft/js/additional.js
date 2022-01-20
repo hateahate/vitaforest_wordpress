@@ -15,11 +15,19 @@ if (authElement2 != null) {
 }
 
 //Blog filter close
-document.querySelector('.blog-filters-shown').onclick = function () {
-    document.querySelector('.blog-filter').classList.toggle('blog-filter_active')
+let blogFiltElem = document.querySelector('.blog-filters-shown');
+let blogFiltElem2 = document.querySelector('.blog-filter-close');
+
+if (blogFiltElem != null) {
+    blogFiltElem.addEventListener('click', () => {
+        document.querySelector('.blog-filter').classList.toggle('blog-filter_active');
+    })
 }
-document.querySelector('.blog-filter-close').onclick = function () {
-    document.querySelector('.blog-filter').classList.toggle('blog-filter_active')
+
+if (blogFiltElem2 != null) {
+    blogFiltElem2.addEventListener('click', () => {
+        document.querySelector('.blog-filter').classList.toggle('blog-filter_active');
+    })
 }
 
 //Faq page
