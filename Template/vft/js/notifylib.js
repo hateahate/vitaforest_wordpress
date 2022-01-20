@@ -52,12 +52,9 @@ function logicNotification(className) {
 
 // Функция возвращающая результат проверки авторизации пользователя
 
-function userAuthCheck() {
-    if (notificationAuthData.dataset.auth == 'true') {
-        return true;
-    }
-    else {
-        return false;
+function userAuthCheck(func) {
+    if (notificationAuthData.dataset.auth != 'true') {
+        func();
     }
 }
 
@@ -67,11 +64,9 @@ createNotification('notify1', 'Ok', 'Ммммм, хуета', 'Тестовый 
 logicNotification('notify1');
 
 
-createNotification('notify2', 'Ok', 'Охуеть, вот это да, вот это кайф, вааааай', 'Оно работает и похуй');
+userAuthCheck(createNotification('notify2', 'Ok', 'Охуеть, вот это да, вот это кайф, вааааай', 'Оно работает и похуй'));
 logicNotification('notify2');
 
-if (userAuthCheck() == false) {
-    createNotification('notify3', 'ШААА!', 'Это покажет только неавторизованному пользователю', 'Проверочка на логин')
-}
+
 
 
