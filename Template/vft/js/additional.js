@@ -1,13 +1,18 @@
 // Auth page
 let authElement = document.querySelector(".forgot-password");
-authElement.addEventListener('click', () => {
-    document.querySelector('.reset-password').classList.add('reset-password_active');
-});
+if (authElement != null) {
+    authElement.addEventListener('click', () => {
+        document.querySelector('.reset-password').classList.add('reset-password_active');
+    });
+}
+
 
 let authElement2 = document.querySelector(".close-reset-password");
-authElement2.addEventListener('click', () => {
-    document.querySelector('.reset-password').classList.remove('reset-password_active');
-});
+if (authElement2 != null) {
+    authElement2.addEventListener('click', () => {
+        document.querySelector('.reset-password').classList.remove('reset-password_active');
+    });
+}
 
 //Blog filter close
 document.querySelector('.blog-filters-shown').onclick = function () {
