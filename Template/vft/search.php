@@ -124,5 +124,4 @@ $q = new WP_Query($a);
 </div>
     </div>
 </div>
-<? do_action('vft_js_searchfilter'); ?>
 <? get_footer(); ?>

@@ -87,5 +87,4 @@ do_action( 'woocommerce_after_single_product_summary' );
 <? do_action( 'vft_js_jquery' ); ?>
 <? do_action( 'vft_js_slickslider' ); ?>
 <? do_action( 'vft_js_pcslider' ); ?>
-<? do_action( 'vft_js_total' ); ?>
 

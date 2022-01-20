@@ -58,5 +58,3 @@ do_action( 'woocommerce_account_navigation' ); ?>
 	?>
 </div>
 	</div>
-<? do_action('vft_js_acc'); ?>
-<? do_action('vft_js_orderssort'); ?>
