@@ -637,7 +637,6 @@ if (authPageCheck != null) {
   let authheader = document.querySelector('.header');
   let authfooter = document.querySelector('.main-footer');
   let authmain = document.querySelector('.main-content');
-  let authnologin = document.querySelector('.no-login');
   if (authpage) {
     authheader.classList.add('header-auth');
     authfooter.classList.add('footer-auth');
