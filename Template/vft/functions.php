@@ -1509,5 +1509,15 @@ function wpschool_disable_selection_text() {
 
 add_action( 'wp_footer', 'wpschool_disable_selection_text' );
 
+// Контроллер уведомлений из админ-панели (Кастомизация - Настройка)
+add_action('customize_register', 'vft_notification_controller');
+function vft_fpsale_controller($wp_customize){
+   $wp_customize->add_section('vft_notification_controller_section', array(
+       'title' => 'Front-page sale products customizer'
+   ));
+
+ $wp_customize->add_setting('vft_notification_controller_data', array(
+    'default' => 'Sale product text'
+    ));
 
 ?>
