@@ -307,10 +307,8 @@ let allCount = document.querySelector('.all-count'),
   completedCount = document.querySelector('.completed-count');
 if (allCount != null) {
   let all = 0; let hold = 0; let complete = 0;
-  console.log(currentStatus)
   for (var i = 0; i < currentStatus.length; i++) {
     all++
-    console.log(all)
     if (currentStatus[i].innerHTML === 'Completed') {
       complete++
     }
