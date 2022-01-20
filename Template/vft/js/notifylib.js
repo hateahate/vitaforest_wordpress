@@ -2,10 +2,6 @@
 
 const notificationContainer = document.querySelector('.notification-container');
 
-// Дата-контейнер с информацией о статусе авторизации пользователя
-
-const notificationAuthData = document.querySelector('#notification-auth-data');
-
 // Шаблон функции создания уведомлений
 /**
  * 
@@ -50,28 +46,9 @@ function logicNotification(className) {
     }
 }
 
-// Функция возвращающая результат проверки авторизации пользователя
-
-function userAuthCheck() {
-    if (notificationAuthData.dataset.auth == 'true') {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-
 // Уведомление о необходимости регистрации
-createNotification('notify1', 'Ok', 'Ммммм, хуета', 'Тестовый ноти');
-// Логика текущего уведомления
+createNotification('notify1', 'Ok', 'Lorem Lorem Lorem Lorem Lorem Lorem <a href="google.com">Lorem</a> Lorem Lorem Lorem Lorem Lorem ', 'notify2');
 logicNotification('notify1');
-
-
-createNotification('notify2', 'Ok', 'Охуеть, вот это да, вот это кайф, вааааай', 'Оно работает и похуй');
+createNotification('notify2', 'Ok', 'Lorem Lorem Lorem Lorem Lorem Lorem <a href="google.com">Lorem</a> Lorem Lorem Lorem Lorem Lorem ', 'notify3');
 logicNotification('notify2');
-
-if (userAuthCheck() == false) {
-    createNotification('notify3', 'ШААА!', 'Это покажет только неавторизованному пользователю', 'Проверочка на логин')
-}
-
-
+// Логика текущего уведомления
