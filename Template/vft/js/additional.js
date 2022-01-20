@@ -140,12 +140,14 @@ if (allCount != null) {
 const qty = document.querySelector('.input-text');
 const totalPrice = document.querySelector('.product__total-price');
 const price = document.querySelector('.product-price-calc');
-const currency = document.querySelector('.woocommerce-Price-currencySymbol').innerHTML
-const priceNum = Number(price.innerHTML);
-if (price != null && qty != null && priceNum != 0) {
-    totalPrice.innerHTML = currency + "" + Number(qty.value) * Number(price.innerHTML);
-    qty.onchange = function () {
-        totalPrice.innerHTML = currency + "" + Number(this.value) * Number(price.innerHTML);
+const currency = document.querySelector('.woocommerce-Price-currencySymbol').innerHTML;
+if (price != null) {
+    const priceNum = Number(price.innerHTML);
+    if (qty != null && priceNum != 0) {
+        totalPrice.innerHTML = currency + "" + Number(qty.value) * Number(price.innerHTML);
+        qty.onchange = function () {
+            totalPrice.innerHTML = currency + "" + Number(this.value) * Number(price.innerHTML);
+        }
     }
 }
 
