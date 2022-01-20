@@ -38,17 +38,19 @@ let kbTitle = document.querySelectorAll('.kb-section__subtitle');
 
 // My account
 const myAccOfferBtns = document.querySelectorAll('.b2bking_myaccount_individual_offer_top');
-[...myAccOfferBtns].forEach(btn => btn.onclick = function () {
-    btn.nextElementSibling.classList.toggle('shown-offer_active');
-});
-let blocks = document.querySelectorAll('.shown-offer');
+if (myAccOfferBtns != null) {
+    [...myAccOfferBtns].forEach(btn => btn.onclick = function () {
+        btn.nextElementSibling.classList.toggle('shown-offer_active');
+    });
+    let blocks = document.querySelectorAll('.shown-offer');
 
-blocks[0].classList.add('shown-offer_active');
-const myAccOfferBtnsDesk = document.querySelectorAll('.offer-button');
-myAccOfferBtnsDesk[0].classList.add('offer-button_active');
-[...myAccOfferBtnsDesk].forEach(btn => btn.onclick = function () {
-    doSmth(btn)
-});
+    blocks[0].classList.add('shown-offer_active');
+    const myAccOfferBtnsDesk = document.querySelectorAll('.offer-button');
+    myAccOfferBtnsDesk[0].classList.add('offer-button_active');
+    [...myAccOfferBtnsDesk].forEach(btn => btn.onclick = function () {
+        doSmth(btn)
+    });
+}
 
 function doSmth(btn) {
     for (var i = 0; i < blocks.length; i++) {
