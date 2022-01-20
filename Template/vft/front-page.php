@@ -1,3 +1,8 @@
+<?
+/*
+* Template Name: Privacy
+*/
+?>
 <? get_header();?>
 <main class="main-content">
 	<h1 hidden="true">
