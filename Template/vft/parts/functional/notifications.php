@@ -1,3 +1,4 @@
+<? // Notifications ?>
 <div class="notification-wrapper">
 <div class="notification-container">
 </div>
@@ -15,4 +16,7 @@
     ?>
 <div id="notification-auth-data" data-auth="<? notification_auth_data(); ?>"></div>
 <? do_action('vft_js_notifylib'); ?>
+<script id="notification-load">
+<? echo get_theme_mod('vft-notification-controller-data'); ?>
+</script>
 </div>

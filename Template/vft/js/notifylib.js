@@ -90,10 +90,6 @@ function createNotificationAuth(notificationName, notificationText, actionName, 
     }
 }
 
-// Уведомление о необходимости регистрации
-createNotification('notify1', 'Ok', 'Ммммм, хуета', 'Тестовый ноти');
-createNotificationNonAuth('notify2', 'Ok', 'Охуеть, вот это да, вот это кайф, вааааай', 'Оно работает и похуй');
-
 
 
 

@@ -1517,7 +1517,7 @@ $wp_customize->add_section('vft-notification-controller-section', array(
 ));
 
 $wp_customize->add_setting('vft-notification-controller-data', array(
-'default' => 'createNotification(addClassName, actionName, notificationText, name)'
+'default' => 'Insert notification creation code. Instruction <a href="/notification-guide">here</a>'
 ));
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'vft-notification-controller-ctrl', array(
