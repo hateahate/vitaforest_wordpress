@@ -1,7 +1,7 @@
 /*
 Theme Name: VFT (Vitaforest)
 Text Domain: Vitaforest
-Version: 2.2.3-dev
+Version: 2.2.4-dev
 Description: Cross-platform template with functional components for the Vitaforest B2B platform.
 Author: Vitaforest, Dejikyo team aka DigitalBros
 Author URI: https://dejikyo.com/
@@ -3529,25 +3529,6 @@ body {
 	color: #7f878b;
 }
 
-.product-card-status {
-	font-weight: 600;
-	font-size: 10px;
-	line-height: 19px;
-	color: #ffffff;
-	height: 19px;
-	padding: 0px 6px;
-	background: #40bf6a;
-	border-radius: 4px 0px 4px 0px;
-	display: inline;
-	position: absolute;
-	z-index: 2;
-	top: -10;
-	-webkit-border-radius: 4px 0px 4px 0px;
-	-moz-border-radius: 4px 0px 4px 0px;
-	-ms-border-radius: 4px 0px 4px 0px;
-	-o-border-radius: 4px 0px 4px 0px;
-}
-
 .woocommerce-product-gallery {
 	position: relative;
 }
@@ -4929,15 +4910,6 @@ body {
 	padding: 10px;
 }
 
-.woocommerce-MyAccount-navigation {
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 22px;
-	color: #303236;
-	width: 95%;
-	margin: 0 auto;
-}
-
 .woocommerce-MyAccount-navigation_hide {
 	display: none;
 }
@@ -4975,42 +4947,6 @@ body {
 	font-size: 18px;
 	line-height: 22px;
 	color: #303236;
-}
-
-.my-account-header__email {
-	font-size: 13px;
-	line-height: 16px;
-	color: #303236;
-	opacity: 0.5;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-.my-account-header__nav {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-}
-
-.my-account-header__edit {
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	top: 12px;
-	right: -11px;
-}
-
-.account-nav__link {
-	font-size: 14px;
-	line-height: 17px;
-	color: #303236;
-	padding: 7px 15px 7px 40px;
-	background: #ffffff;
-	border-radius: 4px;
-	position: relative;
 }
 
 .account-nav__link::before {
@@ -12358,15 +12294,6 @@ height: 170px;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		border: 1px solid #eaebec;
-	}
-
-	.woocommerce-MyAccount-navigation {
-		width: 293px;
-		margin-right: 28px;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-		border: 1px solid #eaebec;
-		margin-bottom: 25px;
 	}
 
 	.woocommerce-MyAccount-navigation-link {
