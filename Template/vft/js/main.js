@@ -168,20 +168,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let textToShow = document.querySelector('.about__full-text');
 let showBtn = document.querySelector('.about__show-btn');
-showBtn.onclick = function () {
-  textToShow.classList.toggle('about__full-text_active');
-  this.classList.toggle('about__show-btn_active')
-  if (this.classList.contains('about__show-btn_active')) {
-    this.innerHTML = "-"
-  } else {
-    this.innerHTML = "+"
-    window.scrollTo({
-      top: 2200,
-      behavior: "smooth"
-    });
+if (showBtn != null) {
+  showBtn.onclick = function () {
+    textToShow.classList.toggle('about__full-text_active');
+    this.classList.toggle('about__show-btn_active')
+    if (this.classList.contains('about__show-btn_active')) {
+      this.innerHTML = "-"
+    } else {
+      this.innerHTML = "+"
+      window.scrollTo({
+        top: 2200,
+        behavior: "smooth"
+      });
+    }
   }
 }
-
 // Additional
 
 // Auth page
