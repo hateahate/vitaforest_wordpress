@@ -43,13 +43,14 @@ if (myAccOfferBtns != null) {
         btn.nextElementSibling.classList.toggle('shown-offer_active');
     });
     let blocks = document.querySelectorAll('.shown-offer');
-
-    blocks[0].classList.add('shown-offer_active');
-    const myAccOfferBtnsDesk = document.querySelectorAll('.offer-button');
-    myAccOfferBtnsDesk[0].classList.add('offer-button_active');
-    [...myAccOfferBtnsDesk].forEach(btn => btn.onclick = function () {
-        doSmth(btn)
-    });
+    if (blocks[0] != undefined) {
+        blocks[0].classList.add('shown-offer_active');
+        const myAccOfferBtnsDesk = document.querySelectorAll('.offer-button');
+        myAccOfferBtnsDesk[0].classList.add('offer-button_active');
+        [...myAccOfferBtnsDesk].forEach(btn => btn.onclick = function () {
+            doSmth(btn)
+        });
+    }
 }
 
 function doSmth(btn) {
@@ -73,77 +74,79 @@ const statusBtn = document.querySelector('.title-status');
 const ordersNavigation = document.querySelector('.orders__navigation');
 const pendingOrdersBtn = document.querySelector('.orders__navigation-btn_onhold');
 const completeOrdersBtn = document.querySelector('.orders__navigation-btn_complete');
-const currentStatus = document.querySelectorAll('.order-item__status')
-allOrdersBtn.onclick = function () {
-    currentStatus.forEach(function (item, i, arr) {
-        item.parentNode.classList.remove('order-item_hide');
-    });
-    ordersNavigation.classList.remove('orders__navigation_active')
-
-}
-statusBtn.onclick = function () {
-    ordersNavigation.classList.toggle('orders__navigation_active')
-}
-
-pendingOrdersBtn.onclick = function () {
-    currentStatus.forEach(function (item, i, arr) {
-        if (item.innerHTML === 'On hold') {
+const currentStatus = document.querySelectorAll('.order-item__status');
+if (allOrdersBtn != null) {
+    allOrdersBtn.onclick = function () {
+        currentStatus.forEach(function (item, i, arr) {
             item.parentNode.classList.remove('order-item_hide');
-            return
-        } else {
-            item.parentNode.classList.add('order-item_hide');
-            return
-        }
+        });
+        ordersNavigation.classList.remove('orders__navigation_active')
 
-    });
-    ordersNavigation.classList.remove('orders__navigation_active')
+    }
+    statusBtn.onclick = function () {
+        ordersNavigation.classList.toggle('orders__navigation_active')
+    }
+
+    pendingOrdersBtn.onclick = function () {
+        currentStatus.forEach(function (item, i, arr) {
+            if (item.innerHTML === 'On hold') {
+                item.parentNode.classList.remove('order-item_hide');
+                return
+            } else {
+                item.parentNode.classList.add('order-item_hide');
+                return
+            }
+
+        });
+        ordersNavigation.classList.remove('orders__navigation_active')
+    }
+    completeOrdersBtn.onclick = function () {
+        currentStatus.forEach(function (item, i, arr) {
+            if (item.innerHTML === 'Completed') {
+                item.parentNode.classList.remove('order-item_hide');
+                return
+            } else {
+                item.parentNode.classList.add('order-item_hide');
+                return
+            }
+
+        });
+        ordersNavigation.classList.remove('orders__navigation_active')
+    }
 }
-completeOrdersBtn.onclick = function () {
-    currentStatus.forEach(function (item, i, arr) {
-        if (item.innerHTML === 'Completed') {
-            item.parentNode.classList.remove('order-item_hide');
-            return
-        } else {
-            item.parentNode.classList.add('order-item_hide');
-            return
-        }
-
-    });
-    ordersNavigation.classList.remove('orders__navigation_active')
-}
-
 
 let allCount = document.querySelector('.all-count'),
     onholdCount = document.querySelector('.onhold-count'),
     completedCount = document.querySelector('.completed-count');
-let all = 0; let hold = 0; let complete = 0;
-console.log(currentStatus)
-for (var i = 0; i < currentStatus.length; i++) {
-    all++
-    console.log(all)
-    if (currentStatus[i].innerHTML === 'Completed') {
-        complete++
+if (allCount != null) {
+    let all = 0; let hold = 0; let complete = 0;
+    console.log(currentStatus)
+    for (var i = 0; i < currentStatus.length; i++) {
+        all++
+        console.log(all)
+        if (currentStatus[i].innerHTML === 'Completed') {
+            complete++
+        }
+        else if (currentStatus[i].innerHTML === 'On hold') {
+            hold++
+        }
     }
-    else if (currentStatus[i].innerHTML === 'On hold') {
-        hold++
-    }
+    allCount.innerHTML = "(" + all + ")";
+    onholdCount.innerHTML = "(" + hold + ")";
+    completedCount.innerHTML = "(" + complete + ")";
 }
-allCount.innerHTML = "(" + all + ")";
-onholdCount.innerHTML = "(" + hold + ")";
-completedCount.innerHTML = "(" + complete + ")";
-
 // Total price calc
 
 const qty = document.querySelector('.input-text');
 const totalPrice = document.querySelector('.product__total-price');
 const price = document.querySelector('.product-price-calc');
 const currency = document.querySelector('.woocommerce-Price-currencySymbol').innerHTML
-
-
-totalPrice.innerHTML = currency + "" + Number(qty.value) * Number(price.innerHTML);
-qty.onchange = function () {
-    totalPrice.innerHTML = currency + "" + Number(this.value) * Number(price.innerHTML);
+const priceNum = Number(price.innerHTML);
+if (qty != null && priceNum != 0) {
+    totalPrice.innerHTML = currency + "" + Number(qty.value) * Number(price.innerHTML);
+    qty.onchange = function () {
+        totalPrice.innerHTML = currency + "" + Number(this.value) * Number(price.innerHTML);
+    }
 }
-
 
 
