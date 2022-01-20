@@ -1513,11 +1513,11 @@ add_action( 'wp_footer', 'wpschool_disable_selection_text' );
 add_action('customize_register', 'vft_notification_controller');
 function vft_notification_controller($wp_customize){
 $wp_customize->add_section('vft-notification-controller-section', array(
-    'title' => 'Front-page sale products customizer'
+    'title' => 'Notifications customizer'
 ));
 
 $wp_customize->add_setting('vft-notification-controller-data', array(
-'default' => 'Sale product text'
+'default' => 'createNotification(addClassName, actionName, notificationText, name)'
 ));
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'vft-notification-controller-ctrl', array(
