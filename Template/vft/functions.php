@@ -1519,5 +1519,6 @@ function vft_fpsale_controller($wp_customize){
  $wp_customize->add_setting('vft_notification_controller_data', array(
     'default' => 'Sale product text'
     ));
+}
 
 ?>
