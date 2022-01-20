@@ -607,3 +607,67 @@ if (counter != null) {
     else { currentnum.innerHTML = Number(currentnum.innerHTML) - 1 }
   }
 }
+
+
+
+// Return to promo
+
+let currentDate = Date.now();
+let visitDate = localStorage.getItem('adVisitDate');
+let intervalDate = currentDate - visitDate;
+if (intervalDate > 7200000) {
+  localStorage.removeItem('adVisitor');
+}
+
+let adVisitorCont = document.querySelector('.advisitor-btn');
+if (localStorage.adVisitor === 'rhodiola') {
+  adVisitorCont.innerHTML = '<a href="/rhodiola-promo" class="btn advisitor_btn">Rhodiola Promo</a>';
+}
+else if (localStorage.adVisitor === 'chaga') {
+  adVisitorCont.innerHTML = '<a href="/chaga-promo" class="btn advisitor_btn">Chaga Promo</a>';
+}
+
+
+const authPageCheck = document.querySelector('.main-content-auth');
+if (authPageCheck != null) {
+  let authcont = document.querySelector('.container');
+  let authpage = document.querySelector('.auth-page');
+  let authheader = document.querySelector('.header');
+  let authfooter = document.querySelector('.main-footer');
+  let authmain = document.querySelector('.main-content');
+  let authnologin = document.querySelector('.no-login');
+  if (authpage) {
+    authheader.classList.add('header-auth');
+    authfooter.classList.add('footer-auth');
+    authmain.classList.add('main-content-auth');
+    authnologin.classList.add('no-login-auth');
+    authcont.classList.remove('container');
+  }
+}
+
+
+let logoutBtn = document.querySelector('.logout-btn');
+let logoutClose = document.querySelector('.close-logout-popup');
+let logoutPop = document.querySelector('.logout-popup');
+let logoutBg = document.querySelector('.desktop-popup-bg');
+logoutBtn.onclick = function () {
+  logoutPop.classList.add('logout-popup_active');
+  logoutBg.classList.add('desktop-popup-bg_active');
+}
+document.querySelector(".close-logout-popup").onclick = function () {
+  document.querySelector('.logout-popup').classList.remove('logout-popup_active');
+  document.querySelector('.desktop-popup-bg').classList.remove('desktop-popup-bg_active');
+}
+document.querySelector(".desktop-popup-bg").onclick = function () {
+  document.querySelector('.logout-popup').classList.remove('logout-popup_active');
+  document.querySelector('.desktop-popup-bg').classList.remove('desktop-popup-bg_active');
+}
+
+  // Bitrix Widget
+
+  (function (w, d, u) {
+    var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
+    var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+  })(window, document, 'https://portal.vitaforestfood.com/upload/crm/site_button/loader_8_eal8j3.js');
+
+console.log('main.js status: Ok');

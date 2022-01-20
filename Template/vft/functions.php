@@ -12,7 +12,6 @@ function vft_register_basics(){
     wp_enqueue_style( 'vft-style', get_template_directory_uri() . "/style.css", array(), $version, 'all' );
 	}
     wp_enqueue_script( 'vft-main', get_template_directory_uri() . "/js/main.js", array(), $version, 'all');
-    wp_enqueue_script( 'vft-additional', get_template_directory_uri() . "/js/additional.js", array(), $version, 'all');
   }
   add_action( 'wp_enqueue_scripts', 'vft_register_basics' );
 
@@ -228,11 +227,6 @@ if(is_page('rhodiola-promo') or is_page('chaga-promo'))
 echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/landslick.js"></script>';
 }
 
-add_action('vft_js_blogpage', 'vft_js_blogpage');
-function vft_js_blogpage(){
-echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/blog-page.js"></script>';
-}
-
 // Load slider script
 add_action('vft_js_slickslider', 'vft_js_slickslider');
 function vft_js_slickslider(){
@@ -244,31 +238,6 @@ add_action('vft_js_notifylib', 'vft_js_notifylib');
 function vft_js_notifylib(){
 echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/notifylib.js"></script>';
 }
-
-// Load search results filter script
-add_action('vft_js_searchfilter', 'vft_js_searchfilter');
-function vft_js_searchfilter(){
-echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/searchfilter.js"></script>';
-}
-
-// Load search results filter script
-add_action('vft_js_singlewiki', 'vft_js_singlewiki');
-function vft_js_singlewiki(){
-echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/single-wiki.js"></script>';
-}
-
-// Load slider script
-add_action('vft_js_pcslider', 'vft_js_pcslider');
-function vft_js_pcslider(){
-echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/productcard-slider.js"></script>';
-}
-
-// Load shop script
-add_action('vft_js_shop', 'vft_js_shop');
-function vft_js_shop(){
-echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/shop.js"></script>';
-}
-
 
 add_action('vft_js_jquery', 'vft_js_jquery');
 function vft_js_jquery(){
