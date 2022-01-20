@@ -12,6 +12,7 @@ function vft_register_basics(){
     wp_enqueue_style( 'vft-style', get_template_directory_uri() . "/style.css", array(), $version, 'all' );
 	}
     wp_enqueue_script( 'vft-main', get_template_directory_uri() . "/js/main.js", array(), $version, 'all');
+    wp_enqueue_script( 'vft-additional', get_template_directory_uri() . "/js/additional.js", array(), $version, 'all');
   }
   add_action( 'wp_enqueue_scripts', 'vft_register_basics' );
 
@@ -232,12 +233,6 @@ function vft_js_blogpage(){
 echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/blog-page.js"></script>';
 }
 
-
-add_action('vft_js_authpage', 'vft_js_authpage');
-function vft_js_authpage(){
-echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/auth-page.js"></script>';
-}
-
 // Load slider script
 add_action('vft_js_slickslider', 'vft_js_slickslider');
 function vft_js_slickslider(){
@@ -274,35 +269,12 @@ function vft_js_shop(){
 echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/shop.js"></script>';
 }
 
-// Load faq script
-add_action('vft_js_faq', 'vft_js_faq');
-function vft_js_faq(){
-echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/faq-page.js"></script>';
-}
 
-// Load calc script
-add_action('vft_js_total', 'vft_js_total');
-function vft_js_total(){
-echo '<script type="text/javascript" id="vft-js-total" src="'.get_template_directory_uri().'/js/price-total-calc.js"></script>';
-}
-
-// Load my account script
-add_action('vft_js_acc', 'vft_js_acc');
-function vft_js_acc(){
-echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/my-account.js"></script>';
-}
-
-// Load my account script
 add_action('vft_js_jquery', 'vft_js_jquery');
 function vft_js_jquery(){
 echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/jquery.js"></script>';
 }
 
-// Load orders sortering script
-add_action('vft_js_orderssort', 'vft_js_orderssort');
-function vft_js_orderssort(){
-echo '<script type="text/javascript" src="'.get_template_directory_uri().'/js/orderssort.js"></script>';
-}
 
 // Theme Support
 
