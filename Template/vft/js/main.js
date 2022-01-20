@@ -630,7 +630,7 @@ else if (localStorage.adVisitor === 'chaga') {
 }
 
 
-const authPageCheck = document.querySelector('.main-content-auth');
+const authPageCheck = document.querySelector('.auth-page');
 if (authPageCheck != null) {
   let authcont = document.querySelector('.container');
   let authpage = document.querySelector('.auth-page');
