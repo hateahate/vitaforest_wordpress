@@ -587,4 +587,5 @@ if (logoutBtn != null) {
   var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
 })(window, document, 'https://portal.vitaforestfood.com/upload/crm/site_button/loader_8_eal8j3.js');
 
-console.log('main.js status: Ok');
+console.log('Vitaforest main.js status: Ok');
+console.log('You guys dont need to crack that code. Youre young, youre joking, its easy for you. This isnt it. This isnt Chikatilo or even the secret service archives. Its better to stay out of here. Seriously, any of you will regret it. Better close the code and forget what was written here. I quite understand that this message will cause additional interest, but I want to warn inquisitive at once - stop. The rest just will not find...');

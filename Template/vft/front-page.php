@@ -162,7 +162,6 @@
       </section>
 					</div>
 	   </div>
-<? do_action('vft_unisender_form'); ?>
    </main>
 <? get_footer(); ?>
 <? do_action('vft_js_slider');?>
