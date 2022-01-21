@@ -102,21 +102,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="logout-popup__text">Are you sure you want to log out?</p>
     <div class="logout-actions">
 <a class="logout-popup__confirm-logout" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
-    </div>  
-</div>
-<div class="nologin-popup">
-    <div class="logout-popup__head">
-        <p class="logout-popup__title">
-            Notification
-        </p>
-        <button class="close-nologin-popup"><img
-                src="<?php echo get_bloginfo( 'template_directory' ); ?>/img/burger-close.svg"
-                alt="Close button"></button>
-    </div>
-    <p class="logout-popup__text">To find out more information about products (price, stock, documentation), you need to
-        <a href="/registration">register</a> or <a href="/my-account">log in</a>.</p>
-    <div class="logout-actions">
-        <button class="nologin-ok">Ok</button>
     </div>
 </div>
 <? get_template_part('/parts/functional/notifications'); ?>		
