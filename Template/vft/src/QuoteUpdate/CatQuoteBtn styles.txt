@@ -1,0 +1,82 @@
+.loop-auth-quote .quantity{
+display: none;
+}
+
+
+
+.hide-qty-quote{
+	display: none !important;
+}
+
+
+.loop-auth-quote{
+	width: 100%;
+	display: flex;
+}
+
+@media screen and (min-width: 1128px){
+.loop-auth-quote .quantity{
+	width: 100px;
+	position: relative;
+	display: block !important;
+	margin-right: 5px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #f7f8f9;	
+	border: 1px solid #eaebec;
+}
+
+.loop-auth-quote .woocommerce-loop-product__link{
+	display: block !important;
+}
+
+.loop-auth-quote .quantity .input-text.qty.text{
+	display: block;
+    height: 32px;
+    line-height: 32px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;	
+	border: none;
+    background: #f7f8f9;
+}
+
+
+
+.loop-auth-quote .quantity .qty_button.plus{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    width: 20px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+	background: #f7f8f9;
+}
+
+.loop-auth-quote .quantity .qty_button.minus{
+	    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    width: 20px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+	background: #f7f8f9;
+}
+}
